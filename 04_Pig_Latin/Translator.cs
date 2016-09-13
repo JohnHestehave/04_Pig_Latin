@@ -10,13 +10,13 @@ namespace _04_Pig_Latin
 	{
 		public string Translate(string sentence)
 		{
-			char[] vowels = {'a','e', 'i', 'o', 'A', 'E', 'I', 'O'};
+			char[] vowels = {'a','e', 'i', 'o', 'y', 'A', 'E', 'I', 'O', 'Y'};
 			string newSentence = "";
 			string[] words = sentence.Split(' ');
 			foreach(string word in words)
 			{
 				char c = char.ToUpper(word[0]);
-				bool vowel = "AEIO".IndexOf(c) >= 0;
+				bool vowel = "AEIOY".IndexOf(c) >= 0;
 				if (vowel)
 				{
 					newSentence += word + "ay ";
